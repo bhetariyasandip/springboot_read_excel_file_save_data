@@ -18,8 +18,8 @@ public class Controller {
 	private UserService userService;
 
 	
-	@PostMapping("/uploadProfileImage")
-	public List<User>  uploadProfileImage(@RequestParam("file") MultipartFile file) throws Exception {
+	@PostMapping("/uploadExcelFile")
+	public List<User>  uploadExcelFile(@RequestParam("file") MultipartFile file) throws Exception {
 		return userService.save(file.getInputStream());
 	}
 	
